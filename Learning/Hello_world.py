@@ -43,27 +43,33 @@ bicycles = ['trek', 'cannon-dale', 'red line', 'specialized']
 print(bicycles[0])
 bicycles = ['trek', 'cannon-dale', 'red line', 'specialized']
 print(bicycles[-2])
+
 # using f-string
 bicycles = ['trek', 'cannon-dale', 'red line', 'specialized']
 message = f"My first bicycle was a {bicycles[0]} yes!"
 print(message)
+
 # changing elements
 motorcycles = ["honda", "yamaha", "suzuki"]
 motorcycles[0] = "Qlik"
 print(motorcycles[0])
+
 # adding element to lists
 motorcycles = ['honda', 'yamaha', 'suzuki', 'ferrari']
 print(motorcycles)
 motorcycles = ['honda', 'yamaha', 'suzuki']
 print(motorcycles)
+
 # inserting new element to any position
 motorcycles = ['honda', 'yamaha', 'suzuki']
 motorcycles.insert(2, 'ducat')
 print(motorcycles)
+
 # removing elements using del statement
 motorcycles = ['honda', 'yamaha', 'suzuki']
 del motorcycles[0]
 print(motorcycles)
+
 # using pop
 motorcycles = ['honda', 'yamaha', 'suzuki']
 popped_motorcycle = motorcycles.pop()
@@ -72,6 +78,7 @@ print(popped_motorcycle)
 motorcycles = ['honda', 'yamaha', 'suzuki']
 last_owned = motorcycles.pop()
 print(f"The last motorcycle I owned was a {last_owned.title()}.")
+
 # using remove element
 motorcycles = ['honda', 'yamaha', 'suzuki', 'ducat']
 # motorcycles.remove('ducat')
@@ -80,6 +87,7 @@ too_expensive = 'ducat'
 motorcycles.remove(too_expensive)
 print(motorcycles)
 print(f"\nA {too_expensive.title()} is too expensive for me.")
+
 # sorting a list
 car = ['bmw', 'audi', 'toyota', 'subaru']
 car.sort()
@@ -93,12 +101,14 @@ print("\nHere is the sorted list:")
 print(sorted(cars))
 print("\nHere is the original list again:")
 print(cars)
+
 # Printing a List in Reverse Order
 cars = ['bmw', 'audi', 'toyota', 'subaru']
 print(cars)
 cars.reverse()
 print(cars)
 print(len(cars))
+
 # using loop
 magicians = ['alice', 'david', 'carolina']
 for magician in magicians:
@@ -112,14 +122,17 @@ for magician in magicians:
     print(f"{magician.title()}, that was a great trick!")
     print(f"i can't to see your next trick, {magician.title()}. \n")
 print("Thank you, everyone. That was a great magic show!\n")
+
 # Range
 for value in range(1, 6):
     print(value)
+    
 # using range to make list
 numbers = list(range(1, 6))
 print(numbers)
 even_numbers = list(range(2, 11, 2))
 print(even_numbers)
+
 # using for loop
 squares = []
 for value in range(1, 11):
@@ -129,16 +142,20 @@ digits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 print(min(digits))
 print(max(digits))
 print(sum(digits))
+
 # also
 squares = [value ** 2 for value in range(1, 11)]
 print(squares)
+
 # slice
 players = ['charles', 'martina', 'michael', 'florence', 'eli']
 print(players[1:5:2])
+
 # looping through a slice
 players = ['durant', 'leBron', 'jordan', 'giannis', 'kobe']
 for player in players[:3]:
     print(player.title())
+ 
 # copying a list
 my_foods = ['pizza', 'favail', 'carrot cake']
 friend_foods = my_foods[0:1]
@@ -148,16 +165,19 @@ print(my_foods)
 friend_foods.append('butter')
 print("\nMy friend's favorite foods are:")
 print(friend_foods)
+
 # TUPLES
 dimension = (200, 50)
 print(dimension[0])
 print(dimension[1])
 my_t = (3,)
 print(my_t[0])
+
 # looping through a tuple
 dimensions = (200, 50)
 for dimension in dimensions:
     print(dimension)
+    
 # writing over tuple
 dimensions = (200, 50)
 print("Original dimensions:")
@@ -181,10 +201,12 @@ for new_car in new_cars:
         print(new_car.upper())
     else:
         print(new_car.title())
+        
 # Checking for Inequality
 requested_topping = 'mushrooms'
 if requested_topping != 'anchovies':
     print("hold the anchovies!")
+    
 # numbers comparison
 answer = 17
 if answer != 42:
@@ -194,6 +216,7 @@ if age < 21:
     print("TRUE")
 else:
     print("False")
+    
 # Using AND to Check Multiple Conditions
 age_0 = 22
 age_1 = 18
@@ -201,6 +224,7 @@ if (age_0 >= 21) and (age_1 >= 21):
     print("True")
 else:
     print("False")
+    
 # using OR
 age_0 = 22
 age_1 = 18
@@ -208,6 +232,7 @@ if age_0 >= 21 or age_1 >= 21:
     print("True")
 else:
     print("False")
+    
 # Checking Whether a Value Is Not in a List using NOT
 banned_users = ['andrew', 'carolina', 'david']
 user = 'marie'
@@ -262,6 +287,7 @@ if 'pepperoni' in requested_topping:
     print("adding pepperoni")
 if 'extra cheese' in requested_topping:
     print("\nadding extra cheese")
+    
 # Checking for Special Items
 requested_toppings = ['mushrooms', 'green peppers', 'extra cheese']
 for requested_topping in requested_toppings:
@@ -270,6 +296,7 @@ for requested_topping in requested_toppings:
     else:
         print(f"Adding {requested_topping}")
 print("\nFinished making your pizza!")
+
 # Checking That a List Is Not Empty
 toppings = []
 if toppings:
@@ -277,6 +304,7 @@ if toppings:
         print(f"Adding {topping}.")
 else:
     print("Are you sure you want a plain pizza?")
+    
 # Using Multiple Lists
 available_toppings = ['mushrooms', 'olives', 'green peppers', 'pepperoni', 'pineapple', 'extra cheese']
 list_toppings = ['mushrooms', 'french fries', 'extra cheese']
@@ -286,6 +314,7 @@ for list_topping in list_toppings:
     else:
         print(f"Sorry, we don't have {list_topping}.")
 print("Finished making your pizza!")
+
 # Dictionary
 alien_0 = {'color': 'green', 'points': 10}
 print(alien_0['color'])
@@ -307,6 +336,7 @@ alien_3 = {}
 alien_3['color'] = 'green'
 alien_3['points'] = 20
 print(alien_3)
+
 # modifying a dictionary
 alien_4 = {'color': 'yellow'}
 print(f"the alien is {alien_4['color']}.")
@@ -323,6 +353,7 @@ elif alien_5['speed'] == 'medium':
     x_increment = 2
 else:
     x_increment = 3
+    
 # the new position is the old position plus the increment
 new_alien = alien_5['x_position'] + x_increment
 print(f"new position: {new_alien}")
@@ -516,6 +547,3 @@ while current_number < 10:
     if current_number % 2 == 0:
         continue
     print(f"\t{current_number}")
-
-# Functions
-
