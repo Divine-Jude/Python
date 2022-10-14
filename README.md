@@ -1,5 +1,5 @@
 # Python
-My Python Journey
+# My Python Journey
 
 The Zen of Python, by Tim Peters
 
@@ -46,9 +46,9 @@ If the implementation is easy to explain, it may be a good idea.
 Namspaces are one honking great idea -- Let's do more of those!
 
 
+
 def print_hi(name):
     print(f'Hi, {name}')
-
-
+    
 if __name__ == '__main__':
     print_hi('Divine Jude')
