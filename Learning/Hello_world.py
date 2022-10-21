@@ -547,3 +547,6 @@ while current_number < 10:
     if current_number % 2 == 0:
         continue
     print(f"\t{current_number}")
+
+    
+    
