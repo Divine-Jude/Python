@@ -113,10 +113,12 @@ print(len(cars))
 magicians = ['alice', 'david', 'carolina']
 for magician in magicians:
     print(magician)
-# represents a single item from the list
-# for cat in cats:
-# for dog in dogs:
-# for item in list_of_items:
+
+"""represents a single item from the list
+for cat in cats:
+for dog in dogs:
+for item in list_of_items:"""
+
 magicians = ['alice', 'david', 'carolina']
 for magician in magicians:
     print(f"{magician.title()}, that was a great trick!")
@@ -126,7 +128,7 @@ print("Thank you, everyone. That was a great magic show!\n")
 # Range
 for value in range(1, 6):
     print(value)
-    
+
 # using range to make list
 numbers = list(range(1, 6))
 print(numbers)
@@ -143,7 +145,7 @@ print(min(digits))
 print(max(digits))
 print(sum(digits))
 
-# also
+"""also"""
 squares = [value ** 2 for value in range(1, 11)]
 print(squares)
 
@@ -155,7 +157,7 @@ print(players[1:5:2])
 players = ['durant', 'leBron', 'jordan', 'giannis', 'kobe']
 for player in players[:3]:
     print(player.title())
- 
+
 # copying a list
 my_foods = ['pizza', 'favail', 'carrot cake']
 friend_foods = my_foods[0:1]
@@ -177,7 +179,7 @@ print(my_t[0])
 dimensions = (200, 50)
 for dimension in dimensions:
     print(dimension)
-    
+
 # writing over tuple
 dimensions = (200, 50)
 print("Original dimensions:")
@@ -201,12 +203,12 @@ for new_car in new_cars:
         print(new_car.upper())
     else:
         print(new_car.title())
-        
+
 # Checking for Inequality
 requested_topping = 'mushrooms'
 if requested_topping != 'anchovies':
     print("hold the anchovies!")
-    
+
 # numbers comparison
 answer = 17
 if answer != 42:
@@ -216,7 +218,7 @@ if age < 21:
     print("TRUE")
 else:
     print("False")
-    
+
 # Using AND to Check Multiple Conditions
 age_0 = 22
 age_1 = 18
@@ -224,7 +226,7 @@ if (age_0 >= 21) and (age_1 >= 21):
     print("True")
 else:
     print("False")
-    
+
 # using OR
 age_0 = 22
 age_1 = 18
@@ -232,7 +234,7 @@ if age_0 >= 21 or age_1 >= 21:
     print("True")
 else:
     print("False")
-    
+
 # Checking Whether a Value Is Not in a List using NOT
 banned_users = ['andrew', 'carolina', 'david']
 user = 'marie'
@@ -245,13 +247,15 @@ if age >= 18:
 else:
     print("Sorry, you are too young to vote.")
     print("Please register to vote as soon as you turn 18!")
+
 # Testing for two possible conditions
-# consider an amusement park that charges different rates for different age groups:
-# • Admission for anyone under age 4 is free.
-# • Admission for anyone between the ages of 4 and 18 is $25.
-# • Admission for anyone ages 18 or older is $40.
-# How can we use an if statement to determine a person’s admission rate?
-# The following code tests for the age group of a person and then prints an admission price message:
+"""consider an amusement park that charges different rates for different age groups:
+• Admission for anyone under age 4 is free.
+• Admission for anyone between the ages of 4 and 18 is $25.
+• Admission for anyone ages 18 or older is $40.
+How can we use an if statement to determine a person’s admission rate?
+The following code tests for the age group of a person and then prints an admission price message:
+"""
 age = 12
 if age < 4:
     print("Your admission cost is $0.")
@@ -287,7 +291,7 @@ if 'pepperoni' in requested_topping:
     print("adding pepperoni")
 if 'extra cheese' in requested_topping:
     print("\nadding extra cheese")
-    
+
 # Checking for Special Items
 requested_toppings = ['mushrooms', 'green peppers', 'extra cheese']
 for requested_topping in requested_toppings:
@@ -304,7 +308,7 @@ if toppings:
         print(f"Adding {topping}.")
 else:
     print("Are you sure you want a plain pizza?")
-    
+
 # Using Multiple Lists
 available_toppings = ['mushrooms', 'olives', 'green peppers', 'pepperoni', 'pineapple', 'extra cheese']
 list_toppings = ['mushrooms', 'french fries', 'extra cheese']
@@ -353,7 +357,7 @@ elif alien_5['speed'] == 'medium':
     x_increment = 2
 else:
     x_increment = 3
-    
+
 # the new position is the old position plus the increment
 new_alien = alien_5['x_position'] + x_increment
 print(f"new position: {new_alien}")
@@ -548,5 +552,370 @@ while current_number < 10:
         continue
     print(f"\t{current_number}")
 
-    
-    
+# Functions
+# Defining a Function
+# Here’s a simple function named greet_user() that prints a greeting
+
+
+def greet_user():
+    """Display a simple greeting"""
+    print("Hello!")
+
+
+greet_user()
+
+
+# Passing Information to a Function
+def greet_user(username):
+    """Display a simple greeting"""
+    print(f"Hello, {username.title()}!")
+
+
+greet_user('Jesse')
+
+
+# Passing Arguments
+def describe_pet(animal_type, pet_name):
+    """Display information about a pet"""
+    print(f"\nI have a {animal_type}")
+    print(f"My {animal_type}'s name is {pet_name.title()}")
+
+
+describe_pet('Hamster', 'Harry')
+describe_pet("dog", "willie")
+
+
+# Keyword Arguments
+def describe_pet(animal_type, pet_name):
+    """Display information about a pet."""
+    print(f"\nI have a {animal_type}.")
+    print(f"My {animal_type}'s name is {pet_name.title()}.")
+
+
+describe_pet(animal_type='hamster', pet_name='harry')
+
+
+# Default Values
+def describe_pet(pet_name, animal_type='dog'):
+    """Display information about a pet"""
+    print(f"\nI have a {animal_type}")
+    print(f"My {animal_type}'s name is {pet_name.title()}")
+
+
+describe_pet(pet_name="willie")
+describe_pet('willie')
+describe_pet(pet_name='harry', animal_type='hamster')
+
+
+# Return Values
+def get_formatted_name(first_name, last_name):
+    """Return a fullname, neatly formatted"""
+    full_name = f"\n{first_name} {last_name}"
+    return full_name.title()
+
+
+musician = get_formatted_name('jimi', 'hendrix')
+print(musician)
+print(get_formatted_name('jimi', 'hendrix'))
+
+
+# Making an Argument Optional
+def get_formatted_name(first_name, last_name, middle_name=''):
+    """Return a fullname, neatly formatted"""
+    if middle_name:
+        full_name = f"\n{first_name} {middle_name} {last_name}"
+    else:
+        full_name = f"\n{first_name} {last_name}"
+    return full_name.title()
+
+
+musician = get_formatted_name('john', 'hooker')
+print(musician)
+musician = get_formatted_name('john', 'hooker', 'lee')
+print(musician)
+
+
+# Returning a Dictionary
+def build_person(first_name, last_name):
+    """Return a dictionary of information about a person."""
+    person = {'first': first_name, 'last': last_name}
+    return person
+
+
+musician = build_person('jimi', 'hendrix')
+print(musician)
+
+
+def build_person(first_name, last_name, age=None):
+    """Return a dictionary of information about a person."""
+    person = {'first': first_name, 'last': last_name}
+    if age:
+        person['age'] = age
+    return person
+
+
+musician = build_person('jimi', 'hendrix', age=27)
+print(musician)
+
+
+# using a function with a while loop
+def get_formatted_name(first_name, last_name):
+    """Return a fullname, neatly formatted."""
+    full_name = f"{first_name} {last_name}"
+    return full_name.title()
+
+
+# This is an infinite loop!
+while True:
+    print("\nPlease tell me your name:")
+    print("(Enter 'quit' at any time to quit)")
+    f_name = input("First name: ")
+    if f_name == 'quit':
+        break
+    l_name = input("Last name: ")
+    if l_name == 'quit':
+        break
+    formatted_name = get_formatted_name(f_name, l_name)
+    print(f"Hello, {formatted_name.title()}!")
+
+
+# Passing a List
+def greet_users(names):
+    """Print a simple greeting to each user in the list."""
+    for name in names:
+        msg = f"Hello, {name.title()}!"
+        print(msg)
+
+
+usernames = ['hannah', 'ty', 'margot']
+greet_users(usernames)
+
+# Modifying a List in a Function
+
+"""Consider a company that creates 3D printed models of designs that users submit. Designs that need to be printed are stored in a list, and after being printed they’re moved to a separate list. The following code does this without using functions Start with some designs that need to be printed"""
+
+# Start with some designs that need to be printed.
+unprinted_designs = ['phone case', 'robot pendant', 'dodecahedron']
+completed_models = []
+# Simulate printing each design, until none are left.
+# Move each design to completed_models after printing.
+while unprinted_designs:
+    current_design = unprinted_designs.pop()
+    print(f"Printing model: {current_design}")
+    completed_models.append(current_design)
+# Display all completed models.
+print("\nThe following models have been printed:")
+for completed_model in completed_models:
+    print(completed_model)
+
+
+# We can reorganize previous code by writing two functions
+def print_models(unprinted_designs_1, completed_models_2):
+    """
+    simulate printing each design, until none are left.
+    Move each design to completed_models after printing.
+    """
+    while unprinted_designs_1:
+        current_designs = unprinted_designs_1.pop()
+        print(f"\nPrinting Model: {current_designs}")
+        completed_models_2.append(current_designs)
+
+
+def show_completed_models(completed_models_2):
+    """show all the models that were printed."""
+    print("\nThe following models have been printed:")
+    for complete_model in completed_models_2:
+        print(complete_model)
+
+
+unprinted_design_1 = ['phone case', 'robot pendant', 'dodecahedron']
+completed_models_2 = []
+print_models(unprinted_design_1[:], completed_models_2)
+show_completed_models(completed_models_2)
+
+
+# to keep the original list of unprinted designs for your records.
+# unprinted_design_1(unprinted_design_1[:])
+
+# Passing an Arbitrary Number of Arguments
+def make_pizza(*toppings):
+    """print the list of toppings that have been requested"""
+    print(toppings)
+
+
+make_pizza('pepperoni')
+make_pizza('mushrooms', 'green pepper', 'extra cheese')
+
+
+def make_pizza(*toppings):
+    """Summarize the pizza we are about to make."""
+    print("\nMaking a pizza with the following toppings:")
+    for topping in toppings:
+        print(f"-{topping}")
+
+
+make_pizza('pepperoni')
+make_pizza('mushrooms', 'green pepper', 'extra cheese')
+
+
+# Mixing Positional and Arbitrary Arguments
+def make_pizza(size, *toppings):
+    """Summarize the pizza we are about to make."""
+    print(f"\nMaking a {size}-inch pizza with the following toppings:")
+    for topping in toppings:
+        print(f"- {topping}")
+
+
+make_pizza(16, 'pepperoni')
+make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
+
+
+# Using Arbitrary Keyword Arguments
+def build_profile(first, last, **user_info):
+    """Build a dictionary containing everything we know about a user."""
+    user_info['first_name'] = first
+    user_info['last_name'] = last
+    return user_info
+
+
+user_profile = build_profile('albert', 'einstein', location='princeton', field='physics')
+
+print(user_profile)
+
+
+# Styling functions
+"""If you specify a default value for a parameter, no spaces should be used on either side of the equal sign:
+
+def function_name(parameter_0, parameter_1='default value')
+
+The same convention should be used for keyword arguments in function calls:
+print function_name(value_0, parameter_1='value')"""
+
+
+# Classes
+# Creating a Dog class
+class Dog:
+    """A simple attempt to model a dog."""
+
+    def __init__(self, name, age):
+        """Initialize name and age attributes."""
+        self.name = name
+        self.age = age
+
+    def sit(self):
+        """Simulate a dog sitting in response to a command"""
+        print(f"{self.name} is now sitting.")
+
+    def roll_over(self):
+        """Simulate rolling over in response to a command"""
+        print(f"{self.name} rolled over!")
+
+
+# making an instance
+my_dog = Dog('Willie', 6)
+your_dog = Dog('Lucy', 3)
+my_dog.sit()
+my_dog.roll_over()
+your_dog.sit()
+your_dog.roll_over()
+
+print(f"\nMy dog's name is {my_dog.name}.")
+print(f"My dog is {my_dog.age} years old.")
+my_dog.sit()
+
+print(f"\nYour dog's name is {your_dog.name}.")
+print(f"Your dog is {your_dog.age} years old.")
+your_dog.sit()
+
+
+# Creating a Student Class
+class student:
+    """A simple attempt to model a student."""
+
+    def __init__(self, Name, Major, Gpa, is_on_probation):
+        self.Name = Name
+        self.Major = Major
+        self.Gpa = Gpa
+        self.is_on_probation = is_on_probation
+
+    # class function
+    """Creating an object"""
+
+    def on_honor_roll(self):
+        if self.Gpa >= 3.5:
+            return True
+        else:
+            return False
+
+
+student1 = student("\nJim", "Business", 3.1, False)
+student2 = student("Pam", "Art", 2.5, True)
+
+print(student1.Name)
+print(student2.on_honor_roll())
+
+
+# Quiz test
+question_prompts = [
+    "What color are apples?\n(a) Red/Green\n(b) Purple\n(c) Orange\n\n",
+    "\nWhat color are Bananas?\n(a) Magenta\n(b) Teal\n(c) Yellow\n\n",
+    "\nWhat color are apples?\n(a) Yellow\n(b) Red\n(c) Blue\n\n"
+]
+
+
+class Question:
+    """A simple attempt to model a quiz"""
+
+    def __init__(self, prompts, answers):
+        """Initialize prompt and answer attributes"""
+        self.prompts = prompts
+        self.answers = answers
+
+
+questions = [
+    Question(question_prompts[0], "a"),
+    Question(question_prompts[1], "c"),
+    Question(question_prompts[2], "c")
+]
+
+
+def run_test(Questions):
+    """Creating a list of Object Questions """
+    score = 0
+    for question in Questions:
+        answer = input(question.prompts)
+        if answer == question.answers:
+            score += 1
+    print("You got " + str(score) + "/" + str(len(questions)) + " correct")
+
+
+run_test(questions)
+
+
+# Inheritance
+class Chef:
+
+    def make_chicken(self):
+        print("\nThe chef makes a chicken.")
+
+    def make_salad(self):
+        print("The chef makes a salad.")
+
+    def make_special_dish(self):
+        print("The chef makes a bbq ribs.")
+
+
+class ChineseChef(Chef):
+
+    def make_special_dish(self):
+        print("The chef makes a Orange Chicken.")
+
+    def make_fried_rice(self):
+        print("The chef makes fried rice")
+
+
+myChef = Chef()
+myChef.make_chicken()
+
+myChineseChef = ChineseChef()
+myChineseChef.make_fried_rice()
