@@ -1,5 +1,4 @@
 # Python
-# My Python Journey
 
 The Zen of Python, by Tim Peters
 
@@ -52,3 +51,8 @@ def print_hi(name):
     
 if __name__ == '__main__':
     print_hi('Divine Jude')
+
+# My Python Journey
+
+This have been my journey so far in learning Python
+
