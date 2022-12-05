@@ -54,5 +54,5 @@ if __name__ == '__main__':
 
 # My Python Journey
 
-This have been my journey so far in learning Python
+This have been my journey so far in learning Python learning all the basics
 
