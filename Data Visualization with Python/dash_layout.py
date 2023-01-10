@@ -15,15 +15,13 @@ app.layout = html.Div(children=[
     html.H1(children='Dashboard', style={'textAlign': 'center'}
 
     )
-    # Create dropdown,
-
-    # Create dropdown
+       # Create dropdown
     dcc.Dropdown(options=[
-        {'label': 'New York City', 'value': 'NYC'},
-        {'label': u'MontrÃ©al', 'value': 'MTL'}, 
-        {'lable': 'San Francisco', 'value': 'SF'}
-    ], value='NYC' # Providing a value to dropdown
-
+            {'label': 'New York City', 'value': 'NYC'},
+            {'label': 'Montréal', 'value': 'MTL'},
+            {'label': 'San Francisco', 'value': 'SF'}
+        ],
+        value='NYC' # Providing a vallue to dropdown
     )
 
     # Bar graph
